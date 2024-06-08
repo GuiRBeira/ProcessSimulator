@@ -1,0 +1,3 @@
+/home/gui/projetoSO-1/4-7/build/CMakeFiles/application.dir
+/home/gui/projetoSO-1/4-7/build/CMakeFiles/edit_cache.dir
+/home/gui/projetoSO-1/4-7/build/CMakeFiles/rebuild_cache.dir

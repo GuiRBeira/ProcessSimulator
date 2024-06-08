@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkApplicationWindow" id="window">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Simulador</property>
+    <property name="default-width">-1</property>
+    <property name="default-height">-1</property>
+    <property name="icon">icon.png</property>
+    <signal name="destroy" handler="on_window_destroy" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="width-request">800</property>
+        <property name="height-request">600</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="border-width">20</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">15</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">baseline</property>
+            <property name="valign">center</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">False</property>
+            <property name="border-width">0</property>
+            <property name="resize-mode">immediate</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">15</property>
+            <child>
+              <object class="GtkButton" id="btn_load_file">
+                <property name="label" translatable="yes">Carregar Arquivo</property>
+                <property name="width-request">100</property>
+                <property name="height-request">-1</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="tooltip-text" translatable="yes">Carregar o arquivo dos processos</property>
+                <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="border-width">0</property>
+                <property name="image-position">top</property>
+                <signal name="clicked" handler="on_btn_load_file_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="width-request">300</property>
+                <property name="height-request">-1</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="border-width">0</property>
+                <property name="spacing">15</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <object class="GtkButton" id="btn_sjf">
+                    <property name="label" translatable="yes">SJF Preemptivo</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="tooltip-text" translatable="yes">Politica Shortest Job First</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">False</property>
+                    <property name="border-width">0</property>
+                    <signal name="clicked" handler="on_btn_sjf_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_rr">
+                    <property name="label" translatable="yes">Round Robin</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="tooltip-text" translatable="yes">Politica Round Robin</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">False</property>
+                    <property name="border-width">0</property>
+                    <signal name="clicked" handler="on_btn_rr_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_priority">
+                    <property name="label" translatable="yes">Prioridade Estática</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="tooltip-text" translatable="yes">Politica de Prioridade Estática</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">False</property>
+                    <property name="border-width">0</property>
+                    <signal name="clicked" handler="on_btn_priority_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="width-request">400</property>
+            <property name="height-request">300</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">15</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkTreeView" id="process_by_arq">
+                <property name="width-request">-1</property>
+                <property name="height-request">-1</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="tooltip-text" translatable="yes">Lista de Processos</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="border-width">0</property>
+                <property name="enable-search">False</property>
+                <property name="show-expanders">False</property>
+                <property name="enable-grid-lines">both</property>
+                <property name="activate-on-single-click">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="text_output">
+                <property name="width-request">-1</property>
+                <property name="height-request">-1</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="tooltip-text" translatable="yes">Linha do tempo</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="border-width">0</property>
+                <property name="editable">False</property>
+                <property name="wrap-mode">char</property>
+                <property name="overwrite">True</property>
+                <property name="input-purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
